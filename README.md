@@ -60,7 +60,17 @@ Siga os passos abaixo para configurar e rodar a aplicação em sua máquina.
 
 3.  **Instale as dependências:**
     ```bash
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
+    ```
+    
+    No Mac OS também instale: 
+    ```bash
+    brew install libomp
+    ```
+
+    MacOS: Se o comando acima der "command not found: brew", primeiro instale o Homebrew executando o seguinte comando no seu terminal e, em seguida, repita o a instalação do libomp.
+    ``bash
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     ```
 
 4.  **(Opcional) Execute os notebooks de análise e treinamento:**

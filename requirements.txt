@@ -5,6 +5,7 @@ scikit-learn
 xgboost
 matplotlib
 plotly
+seaborn
 requests
 joblib
 notebook
