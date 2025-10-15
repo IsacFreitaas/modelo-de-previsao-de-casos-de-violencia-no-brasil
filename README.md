@@ -38,6 +38,7 @@ Siga os passos abaixo para configurar e rodar a aplicação em sua máquina.
 
 - Python 3.8 ou superior
 - Git
+- Google Chrome instalado.
 
 ### Passos
 
@@ -69,7 +70,7 @@ Siga os passos abaixo para configurar e rodar a aplicação em sua máquina.
     ```
 
     MacOS: Se o comando acima der "command not found: brew", primeiro instale o Homebrew executando o seguinte comando no seu terminal e, em seguida, repita o a instalação do libomp.
-    ``bash
+    ```bash
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     ```
 
