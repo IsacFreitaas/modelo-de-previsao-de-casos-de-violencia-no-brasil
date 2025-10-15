@@ -8,13 +8,12 @@ from pathlib import Path
 # --- Configurações Iniciais ---
 # Construir caminhos robustos a partir da localização do script
 APP_DIR = Path(__file__).parent
-PROJECT_ROOT = APP_DIR.parent
 
 # Carregar o modelo e os dados (simulados para este exemplo)
 # Em um cenário real, estes seriam os arquivos gerados pelo notebook de modelagem.
 try:
-    model = joblib.load(PROJECT_ROOT / 'model.pkl')
-    df = pd.read_csv(PROJECT_ROOT / 'data/processed/violencia_tratado.csv')
+    model = joblib.load(APP_DIR / 'model.pkl')
+    df = pd.read_csv(APP_DIR / 'data/processed/violencia_tratado.csv')
     df['ano'] = pd.to_datetime(df['ano'], format='%Y')
 except FileNotFoundError:
     # Criar dados dummy caso os arquivos não existam
@@ -48,7 +47,7 @@ def criar_grafico_previsao(df_filtrado, previsoes=None):
     ))
 
     # Linha de previsão
-    if previsoes:
+    if previsoes is not None:
         anos_previsao = pd.to_datetime([df_filtrado['ano'].max() + pd.DateOffset(years=i) for i in range(1, len(previsoes) + 1)])
         fig.add_trace(go.Scatter(
             x=anos_previsao,
