@@ -27,3 +27,10 @@ wheels/
 # Virtual Environments
 venv/
 .venv/
+
+# Products
+model.pkl
+data/
+
+# Jupyter Notebook Dump
+.ipynb_checkpoints/
