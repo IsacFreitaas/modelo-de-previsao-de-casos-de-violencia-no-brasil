@@ -1,0 +1,9 @@
+flet
+pandas
+polars
+scikit-learn
+xgboost
+matplotlib
+plotly
+requests
+joblib
