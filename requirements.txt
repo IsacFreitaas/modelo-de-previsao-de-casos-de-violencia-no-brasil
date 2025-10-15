@@ -7,3 +7,5 @@ matplotlib
 plotly
 requests
 joblib
+notebook
+nbformat
